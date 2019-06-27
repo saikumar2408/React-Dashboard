@@ -1,0 +1,43 @@
+.card{
+    display:inline-block;
+    position: relative;
+    margin: 10px;
+    text-align: center;
+    width: 230px;
+    height: 150px;
+    /* background: linear-gradient(180deg, #4d21eb 3%, #938bbe 100%); */
+    background: linear-gradient(180deg, #4389a2 3%, #0b2238 100%);
+    box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.44);
+}
+
+.card-body-icon{
+    position: absolute;
+    margin-left:110px; 
+    transform: rotate(-50deg);
+    opacity: 0.1;
+}
+.card-header{
+    border: none;
+    padding-top: 10px;
+    font-size: 25px;
+}
+.card-body{
+     color: white;
+     font-family: Roboto, Poppins, sans-serif;
+}
+.card-details{
+    margin-top: 30px;
+}
+.card:hover{
+  box-shadow: 0px 35px 77px -17px rgba(85, 40, 110, 0.64);
+  transform: scale(1.1);
+  transition: all 1000ms ease-out;
+  cursor: pointer;
+}
+
+@media (max-width: 858px) {
+  .wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+}

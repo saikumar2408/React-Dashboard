@@ -1,0 +1,52 @@
+.required:after { content:"*"; color: red }
+
+.full-container{
+    position: fixed;
+    width: 100%;  
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.jumbotorn{
+  opacity: 0.8;
+  width:600px;
+  height: 500px;
+  margin:100px auto;
+  /* border-radius:4%;  */
+  /* background-color: rgb(248, 246, 246); */
+  /* box-shadow: 1px 1px 1px 1px rgba(45, 40, 110, 0.64); */
+  color: rgb(78, 76, 76);
+}
+/* .jumbotorn:hover{
+  box-shadow: 0px 35px 77px -17px rgba(85, 40, 110, 0.64);
+} */
+.form1,
+.form2{
+  padding: 10px;
+  padding-top:40px; 
+  /* background: linear-gradient(180deg, #a24385 3%, #3f1c66 100%); */
+  color: white;
+  height:400px; 
+  transition: 700ms
+}
+.form2{
+    height: 470px;
+}
+.col1{
+background: linear-gradient(180deg, #a24385 3%, #3f1c66 100%);
+}
+.sides{
+  padding: 10px;
+  padding-top:40px; 
+  /* background: linear-gradient(180deg, #a24385 3%, #3f1c66 100%); */
+  color: white;
+  height:400px;
+}
+.col2{
+background: linear-gradient(180deg, #3f1c66  3%, #a24385 100%);
+}

@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react';
+import { Router, Route, Redirect, Switch } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { BreadcrumbsProvider } from 'react-breadcrumbs-dynamic';
+import { ruleBuilder, ability } from './components/Authorization/ability';
+import {PrivateRoute} from './components/PrivateRoute'
+import Home from './components/Home/Home'
+
 import './App.css';
 
-function App() {
+import LoginPage from './components/LoginPage/LoginPage';
+
+export const history = createBrowserHistory();
+export default class App extends Component {
+  componentWillMount(){
+    let user='user';
+    ability.update(ruleBuilder(user));
+  }
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <BreadcrumbsProvider>
+    <Router history={history}>
+      <Switch>
+        <Route exact path="/" render={() => <Redirect to="/home" />} />
+        <Route path="/login" component={LoginPage} />
+         <PrivateRoute path="/home" component={Home} />
 
-export default App;
+        {/* <Route component={ErrorPage} /> */}
+      </Switch>
+    </Router>
+    </BreadcrumbsProvider>
+    </div>
+    );
+   }
+  }

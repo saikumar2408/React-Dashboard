@@ -1,0 +1,32 @@
+#brand {
+    position: absolute;
+    left:0;
+    top:0;
+    width: 139px;
+    height: 29px;
+    font-family: Roboto, Poppins, sans-serif;
+    font-size: 1.1em;
+    color: #19313a;
+    font-weight: 700;
+    text-decoration: none solid;
+    margin-left:20px;
+    margin-top: 10px;
+}
+
+#username {
+    font-family: Roboto, Poppins, sans-serif;
+    font-size: 0.9em;
+    color: #19313a;
+    font-weight: 700;
+    text-decoration: none solid rgba(11, 34, 56, 0.8);
+    margin-right: 10px;
+}
+
+.mr-2{
+    margin: 10px;
+}
+.ml-auto{
+    position: fixed;
+    margin-top:0px;
+    right: 10px;
+}
